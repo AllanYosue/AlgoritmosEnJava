@@ -15,11 +15,27 @@ public class FlipFlop {
 
    public static void main(String[] args) {
 
-   		int numeroActual = 0;
-         int numeroResultado = 0;
-   		System.out.println(args[0]);
+   		int numero = Integer.parseInt(args[0].toString());
+        	int x = 0;
+		while (x <= numero){
+			if (((x % 3) == 0)||((x % 5) == 0)){
+				if ((x % 3 == 0) && (x % 5 !=0)){
+				System.out.println("Flip");
+			}
+			if (( x % 3 != 0) && (x % 5 == 0)){
+				System.out.println("Flop");
+			}
+		}
+		if ((x % 3 == 0) && (x % 5 == 0)){
+			System.out.println("FlipFlop");
+		}
+		if (((x % 3) != 0) && ((x % 5) != 0)){
+			System.out.println(x+" ");
+		}
+		x++;
+	}
 
-   		// si el numero es divisible dentro de 3 imprima "Flip"
+   		/*// si el numero es divisible dentro de 3 imprima "Flip"
 			System.out.println("Flip");
 
    		// si el numero es divisible dentro de 5 imprima "Flop"
@@ -29,7 +45,7 @@ public class FlipFlop {
 			System.out.println("FlipFlop");
 
    		// de lo contrario, imprima el numero
-      		System.out.println(numeroResultado);
+      		System.out.println(numeroResultado);*/
    }
 
 }

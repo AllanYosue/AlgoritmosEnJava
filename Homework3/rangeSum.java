@@ -11,11 +11,35 @@ public class rangeSum {
 
    public static void main(String[] args) {
 
-		System.out.println("limites: "+args[0]+" "+args[1]);
+		
+	int numero1 = Integer.parseInt(args[0].toString());
+	int numero2 = Integer.parseInt(args[1].toString());
+	String var = "";
+	if(numero1 > numero2){
+		if(numero1 != numero2-1){
+			for( int x = numero2 + 1; x<numero1; x++){
+				if(x != numero1 -1){
+					var = var + x + ",";
+				}else{
+					var = var + x;
+				}
+			}
+			System.out.println( var);
+		}
+	}else if(numero2>numero1){
+		if(numero2 != numero1+1){
+			for( int x = numero1 + 1; x < numero2; x++){
+				if(x != numero2 -1){
+					var = var + x + ",";
+				}else{
+					var = var + x;
+				}
+			}
+      		System.out.println( var);
+		}
+	}
 
-      
-         System.out.println("numero actual es:" );
-      
+         /*System.out.println("numero actual es:" );
+      */
    }
-
 }
